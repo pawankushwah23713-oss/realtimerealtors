@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brokerwala  | Premier Real Estate Advisory in Noida</title>
+    <title>Brokerwala | Premier Real Estate Advisory in Noida</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,9 +16,9 @@
         :root {
             --primary-dark: #0b192c;
             --secondary-dark: #1e3e62;
-            --accent-gold: #37d47e; /* Upgraded Luxury Gold */
+            --accent-gold: #37d47e; /* Green Theme Accent */
             --accent-gold-hover: #3b8b81;
-            --gold-gradient: linear-gradient(135deg, #d4af37, #f59e0b);
+            --gold-gradient: linear-gradient(135deg, #37d47e, #10b981);
             --light-bg: #f8fafc;
             --card-bg: #ffffff;
             --text-main: #0f172a;
@@ -57,7 +57,7 @@
             justify-content: space-between;
             align-items: center;
             font-size: 13px;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(55, 212, 126, 0.2);
         }
 
         .top-bar-left, .top-bar-right {
@@ -154,12 +154,12 @@
             background: var(--gold-gradient);
             color: #000;
             font-weight: 700;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+            box-shadow: 0 4px 12px rgba(55, 212, 126, 0.25);
         }
 
         .btn-gold:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 6px 18px rgba(55, 212, 126, 0.4);
         }
 
         .btn-outline {
@@ -242,7 +242,7 @@
             flex-wrap: wrap;
         }
 
-        /* Black USP Bar (Matching Image 1) */
+        /* Black USP Bar */
         .black-usp-bar {
             background: #000;
             color: #fff;
@@ -285,7 +285,7 @@
             font-size: 14px;
         }
 
-        /* Top Real Estate Developers (Image 1) */
+        /* Top Real Estate Developers Section (WITH BRAND LOGOS) */
         .developers-section {
             background: var(--white);
             padding: 50px 5%;
@@ -293,13 +293,13 @@
 
         .developer-logo-card {
             background: var(--white);
-            padding: 20px;
+            padding: 15px 20px;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 90px;
+            height: 90px;
             transition: 0.3s;
         }
 
@@ -309,13 +309,13 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.06);
         }
 
-        .developer-logo-card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--primary-dark);
+        .developer-logo-card img {
+            max-height: 55px;
+            max-width: 100%;
+            object-fit: contain;
         }
 
-        /* Featured Properties Tabs & Grid (Image 2 & 3) */
+        /* Featured Properties Tabs & Grid */
         .featured-properties-section {
             padding: 60px 5%;
             background: var(--light-bg);
@@ -431,34 +431,63 @@
             gap: 5px;
         }
 
-        /* Curated Collections */
+        /* Curated Collections with High-Quality Images */
         .collections-section {
             background: var(--white);
             padding: 60px 5%;
         }
 
         .collection-card {
-            background: var(--light-bg);
-            padding: 25px 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-gold);
-            text-align: center;
-            transition: 0.3s;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+            transition: 0.3s ease;
         }
 
         .collection-card:hover {
-            background: var(--primary-dark);
-            color: var(--white);
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            border-color: var(--accent-gold);
         }
 
-        .collection-card h4 { font-size: 17px; }
-        .collection-card span {
+        .collection-img-box {
+            height: 160px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .collection-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s ease;
+        }
+
+        .collection-card:hover .collection-img {
+            transform: scale(1.08);
+        }
+
+        .collection-body {
+            padding: 16px;
+            text-align: center;
+        }
+
+        .collection-body h4 {
+            font-size: 17px;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+
+        .collection-body span {
             font-size: 13px;
             color: var(--accent-gold);
             font-weight: 600;
         }
 
-        /* Awards & Recognition Slider Section (Image 4) */
+        /* Awards & Recognition Slider Section */
         .awards-section {
             padding: 60px 5%;
             background: var(--white);
@@ -528,30 +557,71 @@
             font-weight: 700;
         }
 
-        /* Blogs & News */
+        /* Property Blogs with Featured Images */
         .content-section { padding: 60px 5%; }
 
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-height: 500px;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 25px;
+            max-height: 550px;
             overflow-y: auto;
             padding-right: 10px;
         }
 
         .blog-card {
             background: var(--white);
-            padding: 20px;
-            border-radius: 8px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border: 1px solid #e2e8f0;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(55, 212, 126, 0.15);
+        }
+
+        .blog-img-box {
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blog-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s ease;
+        }
+
+        .blog-card:hover .blog-img {
+            transform: scale(1.08);
+        }
+
+        .blog-body {
+            padding: 18px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .blog-card .date {
             font-size: 12px;
             color: var(--accent-gold);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .blog-card h4 {
+            font-size: 15px;
+            color: var(--primary-dark);
+            line-height: 1.4;
             font-weight: 600;
-            margin-bottom: 5px;
         }
 
         .news-grid {
@@ -569,7 +639,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.04);
         }
 
-        /* Floating Circular Action Dial Widget (Matches Screenshots) */
+        /* Floating Circular Action Dial Widget */
         .floating-action-widget {
             position: fixed;
             bottom: 25px;
@@ -597,7 +667,6 @@
         }
 
         .widget-btn-item:hover { transform: scale(1.05); }
-
         .widget-btn-item.whatsapp { background: var(--whatsapp-green); color: white; }
         .widget-btn-item.call { background: var(--primary-dark); color: white; border-color: var(--accent-gold); }
 
@@ -657,7 +726,6 @@
             font-size: 13px;
         }
 
-        /* 100% Fully Mobile Responsive Drawer Navigation */
         @media(max-width: 992px) {
             .mobile-toggle { display: block; }
             .nav-links {
@@ -700,8 +768,7 @@
     <!-- Main Mobile Responsive Header -->
     <header>
         <div class="logo-container">
-            <img src="assets/logo.png" alt="Brokerwala  Logo" class="company-logo" onerror="this.style.display='none'">
-            
+            <img src="assets/logo.png" alt="Brokerwala Logo" class="company-logo" onerror="this.style.display='none'">
         </div>
 
         <!-- Navigation Drawer Menu -->
@@ -746,7 +813,7 @@
                     <div class="hero-overlay"></div>
                     <div class="hero-content">
                         <h1>High ROI Residential & Commercial Investments</h1>
-                        <p>Over 5000+ Happy Homeowners Trust Brokerwala </p>
+                        <p>Over 5000+ Happy Homeowners Trust Brokerwala</p>
                         <div class="hero-btn-group">
                             <a href="#contact" class="btn btn-gold" style="padding:12px 25px;"><i class="fa-solid fa-calendar"></i> Schedule Site Visit</a>
                         </div>
@@ -768,7 +835,7 @@
         </div>
     </section>
 
-    <!-- Top Black USP Bar (From Image 1 Screenshot) -->
+    <!-- Black USP Bar -->
     <div class="black-usp-bar">
         <div class="black-usp-item"><i class="fa-solid fa-percent"></i> Zero Brokerage Fees</div>
         <div class="black-usp-item"><i class="fa-solid fa-tags"></i> Lowest Price Guaranteed</div>
@@ -778,7 +845,7 @@
         <div class="black-usp-item"><i class="fa-solid fa-handshake"></i> Post Sales Services</div>
     </div>
 
-    <!-- Top Real Estate Developers (Image 1 Screenshot) -->
+    <!-- Top Real Estate Developers Section (WITH BRAND LOGOS) -->
     <section class="developers-section">
         <div class="section-header">
             <h2>Top Real Estate Developers</h2>
@@ -787,18 +854,42 @@
         
         <div class="swiper developer-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><div class="developer-logo-card"><h3>Shapoorji Pallonji</h3></div></div>
-                <div class="swiper-slide"><div class="developer-logo-card"><h3 style="color:#d97706;">ATS</h3></div></div>
-                <div class="swiper-slide"><div class="developer-logo-card"><h3>Bhutani Infra</h3></div></div>
-                <div class="swiper-slide"><div class="developer-logo-card"><h3 style="color:#16a34a;">Godrej Properties</h3></div></div>
-                <div class="swiper-slide"><div class="developer-logo-card"><h3 style="color:#2563eb;">Signature Global</h3></div></div>
-                <div class="swiper-slide"><div class="developer-logo-card"><h3>Mapsko</h3></div></div>
+                <div class="swiper-slide">
+                    <div class="developer-logo-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Shapoorji_Pallonji_Group_logo.svg/512px-Shapoorji_Pallonji_Group_logo.svg.png" alt="Shapoorji Pallonji" onerror="this.onerror=null; this.outerHTML='<h3 style=\'font-size:16px; font-weight:700; color:#0b192c;\'>Shapoorji Pallonji</h3>';">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="developer-logo-card">
+                        <img src="https://www.atsgreens.com/images/logo.png" alt="ATS" onerror="this.onerror=null; this.outerHTML='<h3 style=\'font-size:18px; font-weight:700; color:#d97706;\'>ATS</h3>';">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="developer-logo-card">
+                        <img src="https://www.bhutaninfra.com/images/logo.png" alt="Bhutani Infra" onerror="this.onerror=null; this.outerHTML='<h3 style=\'font-size:16px; font-weight:700; color:#0b192c;\'>Bhutani Infra</h3>';">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="developer-logo-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Godrej_Logo.svg/512px-Godrej_Logo.svg.png" alt="Godrej Properties" onerror="this.onerror=null; this.outerHTML='<h3 style=\'font-size:16px; font-weight:700; color:#16a34a;\'>Godrej Properties</h3>';">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="developer-logo-card">
+                        <img src="https://www.signatureglobal.in/assets/images/logo.png" alt="Signature Global" onerror="this.onerror=null; this.outerHTML='<h3 style=\'font-size:16px; font-weight:700; color:#2563eb;\'>Signature Global</h3>';">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="developer-logo-card">
+                        <img src="https://www.mapskogroup.com/images/logo.png" alt="Mapsko" onerror="this.onerror=null; this.outerHTML='<h3 style=\'font-size:16px; font-weight:700; color:#0b192c;\'>Mapsko</h3>';">
+                    </div>
+                </div>
             </div>
             <div class="swiper-pagination" style="margin-top:20px;"></div>
         </div>
     </section>
 
-    <!-- Featured Properties Section with Tabs & Detailed Prices (Image 2 & 3 Screenshots) -->
+    <!-- Featured Properties Section with Tabs -->
     <section class="featured-properties-section" id="portfolio">
         <div class="section-header">
             <h2>Featured Properties</h2>
@@ -852,7 +943,7 @@
             </div>
         </div>
 
-        <!-- Commercial Grid (Hidden by default) -->
+        <!-- Commercial Grid -->
         <div class="property-grid" id="commercialGrid" style="display:none;">
             <div class="property-card">
                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" class="property-img" alt="Elan Miracle 84">
@@ -882,7 +973,7 @@
         </div>
     </section>
 
-    <!-- Curated Collections Carousel -->
+    <!-- Curated Collections Section WITH HIGH-QUALITY IMAGES -->
     <section class="collections-section">
         <div class="section-header">
             <h2>Curated Collections</h2>
@@ -890,18 +981,107 @@
         </div>
         <div class="swiper collections-swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><div class="collection-card"><h4>New Projects</h4><span>65 properties</span></div></div>
-                <div class="swiper-slide"><div class="collection-card"><h4>Ready To Move</h4><span>57 properties</span></div></div>
-                <div class="swiper-slide"><div class="collection-card"><h4>Luxury Homes</h4><span>38 properties</span></div></div>
-                <div class="swiper-slide"><div class="collection-card"><h4>Builder Floors</h4><span>7 properties</span></div></div>
-                <div class="swiper-slide"><div class="collection-card"><h4>Budget Friendly</h4><span>41 properties</span></div></div>
-                <div class="swiper-slide"><div class="collection-card"><h4>Penthouses</h4><span>2 properties</span></div></div>
+                <div class="swiper-slide">
+                    <div class="collection-card">
+                        <div class="collection-img-box">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=80" class="collection-img" alt="New Projects">
+                        </div>
+                        <div class="collection-body">
+                            <h4>New Projects</h4>
+                            <span>65 properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="collection-card">
+                        <div class="collection-img-box">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" class="collection-img" alt="Ready To Move">
+                        </div>
+                        <div class="collection-body">
+                            <h4>Ready To Move</h4>
+                            <span>57 properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="collection-card">
+                        <div class="collection-img-box">
+                            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=500&q=80" class="collection-img" alt="Luxury">
+                        </div>
+                        <div class="collection-body">
+                            <h4>Luxury Homes</h4>
+                            <span>38 properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="collection-card">
+                        <div class="collection-img-box">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=500&q=80" class="collection-img" alt="Builder Floors">
+                        </div>
+                        <div class="collection-body">
+                            <h4>Builder Floors</h4>
+                            <span>7 properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="collection-card">
+                        <div class="collection-img-box">
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=500&q=80" class="collection-img" alt="Budget Friendly">
+                        </div>
+                        <div class="collection-body">
+                            <h4>Budget Friendly</h4>
+                            <span>41 properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="collection-card">
+                        <div class="collection-img-box">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=80" class="collection-img" alt="Penthouses">
+                        </div>
+                        <div class="collection-body">
+                            <h4>Penthouses</h4>
+                            <span>2 properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="collection-card">
+                        <div class="collection-img-box">
+                            <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=500&q=80" class="collection-img" alt="Row Houses">
+                        </div>
+                        <div class="collection-body">
+                            <h4>Row Houses</h4>
+                            <span>0 properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="collection-card">
+                        <div class="collection-img-box">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500&q=80" class="collection-img" alt="Condominiums">
+                        </div>
+                        <div class="collection-body">
+                            <h4>Condominiums</h4>
+                            <span>0 properties</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="swiper-pagination" style="margin-top:20px;"></div>
         </div>
     </section>
 
-    <!-- Awards & Recognition Slider (Image 4 Screenshot) -->
+    <!-- Awards & Recognition Slider Section -->
     <section class="awards-section" id="awards">
         <div class="section-header">
             <h2>Awards & Recognition</h2>
@@ -933,7 +1113,7 @@
         </div>
     </section>
 
-    <!-- Customer Say / Testimonials Section -->
+    <!-- Customer Say Section -->
     <section class="testimonials-section">
         <div class="section-header">
             <h2 style="color:white;">Customer Say</h2>
@@ -944,7 +1124,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="testimonial-card">
-                        <p>"Brokerwala  guided us through the complete buying process for our luxury apartment. Zero brokerage and very transparent guidance!"</p>
+                        <p>"Brokerwala guided us through the complete buying process for our luxury apartment. Zero brokerage and very transparent guidance!"</p>
                         <div class="client-info">
                             <div class="client-avatar">RK</div>
                             <div>
@@ -994,23 +1174,76 @@
         </div>
     </section>
 
-    <!-- Property Blogs Section -->
+    <!-- Property Blogs Section WITH FEATURED IMAGES -->
     <section class="content-section" id="blogs" style="background:var(--white);">
         <div class="section-header">
             <h2>Property Blogs</h2>
             <p>Expert investment guides and Noida area guides</p>
         </div>
         <div class="blog-grid">
-            <div class="blog-card"><div class="date">17 Jul, 2026</div><h4>Best Locations to Buy Plots in Jhajjar for Big Growth</h4></div>
-            <div class="blog-card"><div class="date">06 Jul, 2026</div><h4>SPJ Vedatam Sector 14: Is the 12% Assured Return Real?</h4></div>
-            <div class="blog-card"><div class="date">24 Jun, 2026</div><h4>Plots in Kharkhoda: Why Buyers Prefer This Location Now</h4></div>
-            <div class="blog-card"><div class="date">15 Jun, 2026</div><h4>Plots in Pataudi: Best Areas, Prices & Buyer Tips 2026</h4></div>
-            <div class="blog-card"><div class="date">05 Jun, 2026</div><h4>Plots in Jhajjar: Best Areas, Prices & Growth Guide Now</h4></div>
-            <div class="blog-card"><div class="date">26 May, 2026</div><h4>Plots in Jhajjar: Is It the Right Time to Invest in Land?</h4></div>
+            <div class="blog-card">
+                <div class="blog-img-box">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=500&q=80" class="blog-img" alt="Blog 1">
+                </div>
+                <div class="blog-body">
+                    <div class="date">17 Jul, 2026</div>
+                    <h4>Best Locations to Buy Plots in Jhajjar for Big Growth</h4>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-img-box">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=500&q=80" class="blog-img" alt="Blog 2">
+                </div>
+                <div class="blog-body">
+                    <div class="date">06 Jul, 2026</div>
+                    <h4>SPJ Vedatam Sector 14: Is the 12% Assured Return Real?</h4>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-img-box">
+                    <img src="https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=500&q=80" class="blog-img" alt="Blog 3">
+                </div>
+                <div class="blog-body">
+                    <div class="date">24 Jun, 2026</div>
+                    <h4>Plots in Kharkhoda: Why Buyers Prefer This Location Now</h4>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-img-box">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=500&q=80" class="blog-img" alt="Blog 4">
+                </div>
+                <div class="blog-body">
+                    <div class="date">15 Jun, 2026</div>
+                    <h4>Plots in Pataudi: Best Areas, Prices & Buyer Tips 2026</h4>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-img-box">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" class="blog-img" alt="Blog 5">
+                </div>
+                <div class="blog-body">
+                    <div class="date">05 Jun, 2026</div>
+                    <h4>Plots in Jhajjar: Best Areas, Prices & Growth Guide Now</h4>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-img-box">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=80" class="blog-img" alt="Blog 6">
+                </div>
+                <div class="blog-body">
+                    <div class="date">26 May, 2026</div>
+                    <h4>Plots in Jhajjar: Is It the Right Time to Invest in Land?</h4>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Floating Circular Action Dial Widget (Matches Screenshots) -->
+    <!-- Floating Circular Action Dial Widget -->
     <div class="floating-action-widget">
         <a href="tel:9560111997" class="widget-btn-item call"><i class="fa-solid fa-phone"></i> Call Now</a>
         <a href="#contact" class="widget-btn-item"><i class="fa-solid fa-calendar-check"></i> Meeting</a>
@@ -1023,7 +1256,7 @@
         <div class="footer-grid">
             <div class="footer-col" id="about">
                 <h4>About Us</h4>
-                <p>Brokerwala  is a professionally managed real estate services, property brokerage, and consulting company based out of Noida/Noida providing premium property advice across all verticals.</p>
+                <p>Brokerwala is a professionally managed real estate services, property brokerage, and consulting company based out of Noida providing premium property advice across all verticals.</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -1056,7 +1289,7 @@
             </div>
         </div>
         <div class="copyright">
-            Copyright © 2026 Brokerwala  | All Rights Reserved | Privacy Policy | Terms and Conditions | Designed by Advert India
+            Copyright © 2026 Brokerwala | All Rights Reserved | Privacy Policy | Terms and Conditions | Designed by Advert India
         </div>
     </footer>
 
